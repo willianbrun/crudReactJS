@@ -12,12 +12,12 @@
     color: rgb(223, 100, 100) !important;
 }
 
-.toggle-icon{
-    border-color: white !important;
-}
-
 .divisor {
     width: 1px !important;
-    background-color: white !important;
+    background: white !important;
     margin: 12px 15px !important;
+}
+
+.toggle-icon {
+    border-color: white !important;
 }
