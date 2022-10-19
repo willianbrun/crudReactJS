@@ -19,13 +19,11 @@ function Header() {
                     </Navbar.Toggle>
 
                     <Navbar.Collapse className="justify-content-end">
-                        <Nav>
-                            <Nav.Link to="/departamento" as={Link}>Departamento</Nav.Link>
-                            <Nav.Link to="/category" as={Link}>Categorias</Nav.Link>
-                            <Nav.Link to="/patrimony" as={Link}>Patrimônios</Nav.Link>
-                            <Navbar.Text className="divisor" />
-                            <Nav.Link href="/">Sair</Nav.Link>
-                        </Nav>
+                        <Nav.Link to="/departament" as={Link}>Departamento</Nav.Link>
+                        <Nav.Link to="/category" as={Link}>Categorias</Nav.Link>
+                        <Nav.Link to="/patrimony" as={Link}>Patrimônios</Nav.Link>
+                        <Navbar.Text className="divisor" />
+                        <Nav.Link href="/">Sair</Nav.Link>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

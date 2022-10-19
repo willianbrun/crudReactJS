@@ -41,8 +41,25 @@ export default function PatrimonyProvider({ children }) {
         }
     }
 
-    return (< PatrimonyContext.Provider value={
-        {
+    return ( < PatrimonyContext.Provider value = {
+            {
+                patrimonies,
+                setPatrimonies,
+                newPatrimony,
+                editPatrimony,
+                deletePatrimony,
+                typeCrud,
+                patrimonyModal,
+                handleCloseModal,
+                showModal,
+                setPatrimonyModal,
+            }
+        } > { children } < /PatrimonyContext.Provider>);
+    }
+
+    export function usePatrimonies() {
+        const context = useContext(PatrimonyContext);
+        const {
             patrimonies,
             setPatrimonies,
             newPatrimony,
@@ -53,35 +70,18 @@ export default function PatrimonyProvider({ children }) {
             handleCloseModal,
             showModal,
             setPatrimonyModal,
-        }
-    } > {children} </PatrimonyContext.Provider>);
-}
+        } = context;
 
-export function usePatrimonies() {
-    const context = useContext(PatrimonyContext);
-    const {
-        patrimonies,
-        setPatrimonies,
-        newPatrimony,
-        editPatrimony,
-        deletePatrimony,
-        typeCrud,
-        patrimonyModal,
-        handleCloseModal,
-        showModal,
-        setPatrimonyModal,
-    } = context;
-
-    return {
-        patrimonies,
-        setPatrimonies,
-        newPatrimony,
-        editPatrimony,
-        deletePatrimony,
-        typeCrud,
-        patrimonyModal,
-        handleCloseModal,
-        showModal,
-        setPatrimonyModal,
-    };
-}
+        return {
+            patrimonies,
+            setPatrimonies,
+            newPatrimony,
+            editPatrimony,
+            deletePatrimony,
+            typeCrud,
+            patrimonyModal,
+            handleCloseModal,
+            showModal,
+            setPatrimonyModal,
+        };
+    }
